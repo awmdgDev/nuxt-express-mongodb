@@ -4,12 +4,24 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.14.9",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.4.4"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node dist/server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "node_modules/.bin/tsc",
+    "watch": "node_modules/.bin/tsc -w"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
